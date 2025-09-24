@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 
 const app = express();
 const connection_string = process.env.CONNECTION_STRING;
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 const routes = require("./routes/auth.js");
 const secret = process.env.JWT_SECRET;
 app.use(express.json());
