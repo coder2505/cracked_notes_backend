@@ -26,6 +26,11 @@ function authenticateToken(req, res, next) {
 
 app.use("/auth",routes);
 
+app.use("/", (req, res)=>{
+
+  res.send("about page");
+
+});
 
 mongoose.connect(connection_string).then(() => {
   console.log("mongoose connected");
