@@ -6,6 +6,7 @@ const user_model = require("../models/user_model");
 const router = express.Router();
 const secret = process.env.JWT_SECRET;
 
+router.use(express.json());
 
 router.post("/signup", async (req, res) => {
     const email = req.body.username;

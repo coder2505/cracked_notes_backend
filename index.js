@@ -8,6 +8,7 @@ const connection_string = process.env.CONNECTION_STRING;
 const port = process.env.PORT || 3000;
 const routes = require("./routes/auth.js");
 const secret = process.env.JWT_SECRET;
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
